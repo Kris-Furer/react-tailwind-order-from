@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import Header from './components/Header';
+import OrderForm from './components/OrderForm';
 import './App.css';
+import OrderDetails from './components/OrderDetails';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <div className='flex'>
+      <OrderForm/>
+      <OrderDetails/>
+     
+      </div>
+      <button className="mx-5 text-slate-50 px-9 py-3 bg-slate-700">Submit</button>
     </div>
   );
 }
